@@ -11,3 +11,7 @@
 - listener (事件监听函数，事件执行时触发的函数)
 - useCapture (是否采用事件捕获进行事件捕捉)
 - 默认为 false，为事件冒泡方式 
+
+## querySelector()方法
+- 返回匹配指定 CSS 选择器元素的第一个子元素
+- 如果要返回所有匹配元素，用 querySelectorAll() 方法替代。
