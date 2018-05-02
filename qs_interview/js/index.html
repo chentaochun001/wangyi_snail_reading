@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js事件捕获和冒泡</title>
+    <style>
+        #wrapper {
+            margin: 0;
+            padding: 0;
+        }
+        #parent {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            text-align: center;
+            line-height: 3;
+        }
+        #child {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="parent">
+            父元素
+            <div id="child">
+                子元素
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+        var body = document.getElementById("wrapper");
+        var parent = document.getElementById("parent");
+        var child = document.getElementById("child");
+    
+        body.addEventListener("click",function(e){
+            console.log("click-body");
+        },true);
+        
+        // parent.addEventListener("click",function(e){
+        //     console.log("click-parent---事件冒泡");
+        // },false);
+　　　　 
+　　　　 //新增事件捕获事件代码
+        parent.addEventListener("click",function(e){
+            console.log("click-parent--事件捕获");
+        },true);
+
+        child.addEventListener("click",function(e){
+            console.log("click-child");
+            // e.stopPropagation();  // 阻止事件冒泡
+        },false);
+</script>
+</html>
