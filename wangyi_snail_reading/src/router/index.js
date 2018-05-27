@@ -8,12 +8,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/reader'
+      redirect: '/home'
     },
     {
-        path: '/home',
-        name: 'home',
-        component: resolve => require(['../components/Home.vue'],resolve)
+      path: '/home',
+      name: 'home',
+      component: resolve => require(['../components/Home.vue'],resolve)
+    },
+    {
+        path: '/read',
+        name: 'read',
+        component: resolve => require(['../components/Read.vue'],resolve)
     },
     {
         path: '/catagory',
@@ -26,9 +31,9 @@ export default new Router({
         component: resolve => require(['../components/Desk.vue'],reslove)
     },
     {
-      path: '/reader',
-      name: 'reader',
-      component: resolve => require(['../components/Reader.vue'],resolve)
+      path: '/mine',
+      name: 'mine',
+      component: resolve => require(['../components/Mine.vue'],resolve)
     },
   ]
 })

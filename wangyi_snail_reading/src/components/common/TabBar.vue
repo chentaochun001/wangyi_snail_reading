@@ -9,7 +9,7 @@
             <i class="iconfont icon-fenlei2-copy-copy-copy"></i>
             <div class="tab-item__title">分类</div>
         </mt-tab-item>
-        <mt-tab-item class="tab-item" id="desk">
+        <mt-tab-item class="tab-item" id="desk" >
             <i class="iconfont icon-shu-copy"></i>
             <div class="tab-item__title">书桌</div>
         </mt-tab-item>
@@ -18,12 +18,19 @@
             <div class="tab-item__title">我的</div>
         </mt-tab-item>
     </mt-tabbar>
+    
 </template>
 <script>
 export default {
     data() {
         return {
-            selected: ''
+            selected: 'reader',
+            active: 'home'
+        }
+    },
+    methods: {
+        click() {
+            console.log(this.selected)
         }
     }
 }

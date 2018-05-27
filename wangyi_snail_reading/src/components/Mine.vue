@@ -5,7 +5,7 @@
                 {{stated}}
             </div>
             <div class="hd-avatar">
-                <img src="../assets/images/moren.jpg" alt="">
+                <img src="../assets/images/moren.jpg" width="50" height="50">
             </div>
             <div class="hd-username">
                 {{username}}
@@ -21,10 +21,18 @@
                 </div>
             </div>
         </header>
-        <body>
+            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>
+            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>
+            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>
+            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>        
+        <!-- <body v-for="(item, index) in details" :key="index">
+            <mt-cell-swipe :title="item.title" to="" is-link value="带icon" style="height: 50px;">
+                    <img :src="item.imgUrl" slot="icon" width="40" height="40" style="margin-right: 15px;">
+            </mt-cell-swipe>
+        </body> -->
             <div class="bd-items" v-for="(item, index) in details" :key="index">
                 <div class="bd-items__img">
-                    <img :src="item.imgUrl" >
+                    <img :src="item.imgUrl">
                 </div>
                 <div class="bd-items__title">
                     {{item.title}}
@@ -35,11 +43,10 @@
                 <div class="bd-items__icon">
                     >
                 </div>
-
-                <!-- <mt-cell title="" to="" is-link value=""></mt-cell> -->
             </div>
-        </body>
+        
     </div>
+    
 </template>
 <script>
 import message from './../assets/images/message.jpg'
@@ -100,6 +107,11 @@ export default {
 </script>
 <style scoped>
 .bd-items {
-
+    border: none;
+}
+.iconfont {
+    width: 24px;
+    height: 24px;
+    border: none;
 }
 </style>
