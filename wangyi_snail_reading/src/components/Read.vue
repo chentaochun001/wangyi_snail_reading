@@ -26,7 +26,7 @@
                     </router-link>
                 </div>
                 <div class="acticle-footer">
-                    <span class="acticle-footer__hitNum">{{item.hitnumber}}</span>
+                    <span class="acticle-footer__hitNum">{{item.hitnumber}}点击</span>
                     <span class="acticle-footer__dianZan">
                         <span>{{item.dianzan}}</span>
                         <img src="" alt="">

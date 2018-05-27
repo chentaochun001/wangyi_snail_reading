@@ -21,16 +21,12 @@
                 </div>
             </div>
         </header>
-            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>
-            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>
-            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>
-            <mt-cell-swipe title="hello" icon="more" value="带icon"></mt-cell-swipe>        
-        <!-- <body v-for="(item, index) in details" :key="index">
-            <mt-cell-swipe :title="item.title" to="" is-link value="带icon" style="height: 50px;">
+        <body v-for="(item, index) in details" :key="index">
+            <mt-cell :title="item.title" to="" is-link :value="item.describe" style="height: 50px;">
                     <img :src="item.imgUrl" slot="icon" width="40" height="40" style="margin-right: 15px;">
-            </mt-cell-swipe>
-        </body> -->
-            <div class="bd-items" v-for="(item, index) in details" :key="index">
+            </mt-cell>
+        </body>
+            <!-- <div class="bd-items" v-for="(item, index) in details" :key="index">
                 <div class="bd-items__img">
                     <img :src="item.imgUrl">
                 </div>
@@ -43,10 +39,8 @@
                 <div class="bd-items__icon">
                     >
                 </div>
-            </div>
-        
+            </div> -->
     </div>
-    
 </template>
 <script>
 import message from './../assets/images/message.jpg'
