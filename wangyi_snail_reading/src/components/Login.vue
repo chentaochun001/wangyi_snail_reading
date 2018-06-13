@@ -80,28 +80,4 @@ export default {
 
 }
 </style>
-    <!-- <div class="container">
-			<div class="header">
-				<form action="" method="post" onsubmit="return check()">
-					<div id="account">
-						<label for="name">账号：</label>
-						<input type="text" id="name" pattern="[a-zA-Z]{4,12}" title="请输入4-12位英文字符" minlength=4 maxlength=12 autofocus="autofocus" required/>
-					</div>
-					<br />
-					<div id="password">
-						<label for="pwd">密码：</label>
-						<input type="password" id="pwd" pattern="[a-zA-Z0-9]{6}" title="请输入6位英文字符或数字" minlength=6 maxlength=6 autofocus="" required />
-					</div>
-					<br />
-					<div id="test">
-						<label style="font-size: 14px;">(测试账号：test;&nbsp;密码：111111)</label>
-					</div>
-					
-					<br />
-					<button class="submit" type="submit" >登录</button>
-				
-				</form>
-			</div>
-	</div> -->
-
 
