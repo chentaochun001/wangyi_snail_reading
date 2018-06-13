@@ -14,7 +14,7 @@
         <!-- <mt-cell-swipe v-for="(item, index) in stackList" :key="index">
             点击分类，跳转到详情页，并把对应的这个分类中的数据进行传递
             <router-link class="stack-cell" :to="{path: '/stack', query: {stack: this.item}}">
-                <img :src="item.typeCover" class="stack-image" />
+                <img :src="item.typeCover" class="stack-image"/>
                 <div class="stack-name">{{item.bookTypes}}</div>
                 <div class="stack-numb">{{item.bookNumb}}</div>
             </router-link>

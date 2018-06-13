@@ -1,26 +1,41 @@
 <template>
   <div id="app">
-    <Home></Home>
+    <router-view></router-view>
+    <!-- <TabBar></TabBar> -->
+    <!-- <Home></Home> -->
+    <!-- <Login></Login> -->
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
+import Login from './components/Login.vue'
 export default {
   name: 'App',
   components: {
-    Home
+    Home,
+    Login
   }
 }
 </script>
 
 <style>
-@import url(//at.alicdn.com/t/font_674830_njgwcqw49xczyqfr.css);
+@import url(//at.alicdn.com/t/font_674830_t6feqj49mgk138fr.css);
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
 }
-
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shenglue {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;  
+}
 </style>
