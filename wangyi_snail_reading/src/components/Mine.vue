@@ -1,11 +1,11 @@
 <template>
     <div class="container">
-        <header>
-            <div class="hd-state">
-                {{stated}}
+        <header class="page-part">
+            <div class="hd-state" @click="Login()">
+                <div class="hd-state__stated">{{stated}}</div>
             </div>
             <div class="hd-avatar">
-                <img src="../assets/images/moren.jpg" width="50" height="50">
+                <img src="../assets/images/moren.jpg" width="60" height="60" style="border-radius: 50%;">
             </div>
             <div class="hd-username">
                 {{username}}
@@ -13,33 +13,22 @@
             <div class="hd-detail">
                 <div class="hd-detail__time">
                     <span>{{time}}</span>
-                    <span>读书时长</span>
+                    <br/>
+                    <span class="des">读书时长</span>
                 </div>
+                <div class="hd-detail__mark"></div>
                 <div class="hd-detail__points">
                     <span>{{number}}</span>
-                    <span>蜗牛壳</span>
+                    <br/>
+                    <span class="des">蜗牛壳</span>
                 </div>
             </div>
         </header>
         <body v-for="(item, index) in details" :key="index">
             <mt-cell :title="item.title" to="" is-link :value="item.describe" style="height: 50px;">
-                    <img :src="item.imgUrl" slot="icon" width="40" height="40" style="margin-right: 15px;">
+                <img :src="item.imgUrl" slot="icon" width="40" height="40" style="margin-right: 10px;">
             </mt-cell>
         </body>
-            <!-- <div class="bd-items" v-for="(item, index) in details" :key="index">
-                <div class="bd-items__img">
-                    <img :src="item.imgUrl">
-                </div>
-                <div class="bd-items__title">
-                    {{item.title}}
-                </div>
-                <div class="bd-items__des">
-                    {{item.describe}}
-                </div>
-                <div class="bd-items__icon">
-                    >
-                </div>
-            </div> -->
     </div>
 </template>
 <script>
@@ -53,11 +42,11 @@ import sets from './../assets/images/sets.jpg'
 export default {
     data() {
         return {
-            stated: '登录',
+            stated: '编辑',
             isLogined: false,
-            username: '梨',
-            time: '1小时',
-            number: '2',
+            username: 'Amy',
+            time: '480个小时',
+            number: '11',
             details: [
                 {
                     imgUrl: message,
@@ -76,7 +65,7 @@ export default {
                 },
                 {
                     imgUrl: notes,
-                    title: '我的批',
+                    title: '我的批注',
                     describe: ''
                 },
                 {
@@ -90,22 +79,81 @@ export default {
                     describe: '各得1天'
                 },
                 {
+                    imgUrl: invite,
+                    title: '在线客服',
+                    describe: '意见反馈'
+                },
+                {
                     imgUrl: sets,
                     title: '设置',
                     describe: ''
                 }
             ]
         }
+    },
+    methods: {
+        Login() {
+            // 跳转到登录页面
+            this.$router.push('/login');
+            console.log('你点击了');
+        }
     }
 }
 </script>
 <style scoped>
-.bd-items {
-    border: none;
+.container {
+    padding-bottom: 15px;
+}
+.page-part {
+    margin-bottom: 12px;
+    background-color: #fff;
 }
 .iconfont {
     width: 24px;
     height: 24px;
-    border: none;
+}
+.hd-state {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;  
+    text-align: right;
+}
+.hd-state__stated {
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 18px;
+    color: #b3b3b3;
+}
+.hd-avatar {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+.hd-username {
+    width: 100%;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+.hd-detail {
+    display: flex;
+    height: 68px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.hd-detail__time, .hd-detail__points {
+    flex: 1;
+}
+.des {
+    color: #c3c3c3; 
+    font-size: 13px
+}
+.hd-detail__mark {
+    height: 20px;
+    border-left: 1px solid #eeeeee;
+}
+.body {
+    background-color: #fff;
 }
 </style>
