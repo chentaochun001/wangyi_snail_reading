@@ -45,10 +45,10 @@
     </div>
 </template>
 <script>
-import Read from './Read.vue'
-import Catagory from './Catagory.vue'
-import Desk from './Desk.vue'
-import Mine from './Mine.vue'
+import Read from './Read/Read.vue'
+import Catagory from './Catagory/Catagory.vue'
+import Desk from './Desk/Desk.vue'
+import Mine from './Mine/Mine.vue'
 export default {
     data() {
         return {

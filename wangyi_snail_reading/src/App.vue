@@ -9,7 +9,7 @@
 
 <script>
 import Home from './components/Home.vue'
-import Login from './components/Login.vue'
+import Login from './components/Mine/Login.vue'
 export default {
   name: 'App',
   components: {
@@ -31,11 +31,5 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.shenglue {
-  overflow: hidden;
-  text-overflow:ellipsis;
-  display:-webkit-box; 
-  -webkit-box-orient:vertical;  
 }
 </style>
